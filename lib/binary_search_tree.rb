@@ -38,4 +38,17 @@ class BinarySearchTree
       depth
     end
   end
+
+  def include?(value)
+    parent = @head
+    until parent.value == value
+      if value < parent.value
+        parent = parent.left
+      else
+        parent = parent.right
+      end
+      break if parent.right.nil? && parent.left.nil?
+    end
+    parent.value == value
+  end
 end

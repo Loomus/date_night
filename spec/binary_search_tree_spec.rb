@@ -27,4 +27,10 @@ RSpec.describe BinarySearchTree do
     expect(@talladega).to eq(2)
     expect(@teen_witch).to eq(2)
   end
+
+  it "can verify or reject presence of score" do
+   expect(@tree.include?(11)).to be true
+   expect(@tree.include?(97)).to be true
+   expect(@tree.include?(17)).to be false
+ end
 end
